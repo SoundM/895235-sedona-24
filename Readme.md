@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Halyna Karpan](https://up.htmlacademy.ru/htmlcss/24/user/895235).
-* Наставник: `Неизвестно`.
+* Наставник: [Виктория Коваленко](https://htmlacademy.ru/profile/id42638).
 
 ---
 

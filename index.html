@@ -1,12 +1,106 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-  </head>
-  <body>
+	<head>
+		<meta charset="utf-8">
+		<title>Седона</title>
+	</head>
+	<body>
+	<header class="main-header">
+		<nav class="main-navigation">
+            <a class="main-header-logo">
+				<img src="img/index-logo.svg" width="368" height="153" alt="Логотип городка Седона">
+			</a>
+            <ul class="site-navigation">
+				<li><a href="info.html">Информация</a></li>
+				<li><a href="foto.html">Фото и видео</a></li>
+				<li><a href="map.html">Карта штата</a></li>
+				<li><a href="hotels.html">Гостиницы</a></li>  
+			</ul>
+		</nav>
+    </header>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
-
-  </body>
+	<main class="container">
+      
+		<h1 class="visually-hidden">Городок Седона</h1>
+		
+		 <section class="invite">
+			<a class="invite-logo"> 
+				<img src="img/invite.jpeg" width="368" height="153" alt="Панорамный вид"> 
+				<p>Седона-небольшой городок в Аризоне, заслуживающий большего!</p>
+			</a>
+		</section>
+		
+		<!-- Две следующие секции вроде пока не надо было размечать(в задании ини подсвечены красным), но они же есть)))-->
+		 <section class="features">
+			<h2 class="visually-hidden">Преимущества</h2>
+			<p>Рассмотрим 5 причин, по которым Седона лучше, чем Гранд Каньон!</p>
+				<ol class="features-list">
+					 <li class="feature-item">
+						<h3>Настоящий городок</h3>
+						<p>Седона- не аттракцион для туристов, там течет своя жизнь</p>
+					 </li>
+					 <li class="feature-item">
+						<h3>Там есть мост дьявола</h3>
+						<p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+					 </li>
+					<!-- На будущее: первые два элемента списка отличаются от следующих наличием картинок. Наверное необходимо добавить классы. Или просто вставить контентное изображение  --> 
+					 <li class="feature-item">
+						<h3>Небольшая плошадь</h3>
+						<p>Все достопримечательности находятся очень близко</p>
+					 </li>
+					 <li class="feature-item">
+						<h3>Красивая дорога</h3>
+						<p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+					 </li>
+					 <li class="feature-item">
+						<h3>Мало туристов</h3>
+						<p>Большинство едет в Гранд Каньон и толпится там</p>
+					 </li>
+				</ol>
+		</section>
+		
+		<section class="for-tourists">
+			<h2 class="visually-hidden">Для туристов</h2>
+				<ul class="features-list">
+					<li class="feature-item">
+						<h3>Жильё</h3>
+						<p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+					</li>
+					<li class="feature-item">
+						<h3>Еда</h3>
+						<p>Всезда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+					</li>
+					<li class="feature-item">
+						<h3>Сувениры</h3>
+						<p>Не только китайского, но и местного производства!</p>
+					</li>
+				</ul>
+		</section>
+		
+		<section class="book-a-hotel">
+			<h2 class="visually-hidden">Выбор отеля</h2></h2>
+				<h3>Заинтерисовались?</h3>
+				<p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        
+				<!-- Здесь будет форма -->
+		</section>
+    </main>
+	
+	<footer class="main-footer">
+		<a href="map.html">#vizitsedona</a><br>
+		<div class="footer-social">
+			<ul>
+			  <li><a class="social-button" href="#">Твитер</a></li>
+			  <li><a class="social-button" href="#">Фейсбук</a></li>
+			  <li><a class="social-button" href="#">Ютуб</a></li>
+			</ul>
+		</div>
+		<p class="footer-copyright">
+        <b>Website by</b> 
+        <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
+		</p>
+    </footer> 
+	
+	
+	</body>
 </html>

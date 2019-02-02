@@ -22,7 +22,55 @@
 	<main class="container">
       <section class="filters">
 			<h2 class="visually-hidden">Фильтр отелей</h2>
-				<!-- Здесь будет форма -->
+				<!-- Здесь форма -->
+			<form class="filter" method="get" action="https://echo.htmlacademy.ru">
+				<fieldset>
+					<legend>Инфраструктура:</legend>
+					<ul>
+						<li class="filter-option">
+							<input class="filter-input-checkbox" type="checkbox" name="swimming-pool" id="filter-swimming-pool">
+							<label for="filter-swimming-pool">Бассейн</label>
+						</li>
+						<li class="filter-option">
+							<input class="filter-input-checkbox" type="checkbox" name="parking" id="filter-parking">
+							<label for="filter-parking">Парковка</label>
+						</li>
+						<li class="filter-option">
+							<input class="filter-input-checkbox" type="checkbox" name="wi-fi" id="filter-wi-fi" checked>
+							<label for="filter-wi-fi">Wi-fi</label>
+						</li>
+					</ul>
+				</fieldset>
+				
+				<fieldset>
+					<legend>Тип жилья:</legend>
+					<ul>
+						<li class="filter-option">
+							<input class="filter-input-checkbox" type="checkbox" name="hotel" id="filter-hotel" checked>
+							<label for="filter-hotel">Отель</label>
+						</li>
+						<li class="filter-option">
+							<input class="filter-input-checkbox" type="checkbox" name="motel" id="filter-motel">
+							<label for="filter-motel">Мотель</label>
+						</li>
+						<li class="filter-option">
+							<input class="filter-input-checkbox" type="checkbox" name="apartments" id="filter-apartments">
+							<label for="filter-apartments">Апартаменты</label>
+						</li>
+					</ul>
+				</fieldset>
+				
+				<fieldset>
+					<legend>Стоимость в сутки (Р):</legend>
+						<div class="filter-option">
+							<label for="dayscount">Количество дней</label>
+							<span>от 0    до 3000</span>
+							<input type="range" id="dayscount" name="dayscount" min="0" max="3000" step="500"> 
+						</div>
+				</fieldset>
+				
+				<button type="submit" class="filter-button button">Показать</button>
+			</form>	
       </section>
       
        <section class="catalog">

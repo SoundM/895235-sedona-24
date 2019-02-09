@@ -1,0 +1,361 @@
+body {
+  margin: 0;
+  
+  font-family: "PT Sans", Arial, sans-serif; /*Задаем основной и вспомогательный шрифт*/ 
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+  color: #333333;
+  text-transform: uppercase;
+  
+  background-color: #ffffff;
+  width: 1280px;
+}
+
+a {
+  text-decoration: none; /*Отмненяем подчеркивание у ссылок */
+}
+
+ /*Раздел Навигация */
+ 
+.main-navigation{ /*Задаем стили навигации. Размер, цвет и толщину шрифта, высоту строки, фон. */
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.site-navigation { /*Отмненяем маркеры ненумерованного списка */
+  list-style: none;
+}
+
+.site-navigation a { /*Заменяем цвет текста у ссылок на черный как в макете */
+  color: #000000;
+}
+.site-navigation a:hover,  /*Состояние фокуса на ссылке */
+.site-navigation a:focus { /*Состояние наведения на ссылку */
+  color: #81b3d2;
+}
+
+.site-navigation a:active { /*Состояние нажатия на ссылку */
+  color: rgba(0, 0, 0, 0.3);
+}
+.site-navigation .current-page{ /*Состояние активный, находимся на странице */
+  color: #766357;
+}
+
+/* Контейнер */
+.container {
+  background-color: #ffffff;
+  background-position: center;
+  box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
+  width: 1200px;
+}
+
+/* Раздел Панорамный вид с приглашением в Седону */
+.welcome-panorama {
+  background-image: url("../img/polygon.svg"), url("../img/panorama.jpg");/*Вставляем центральную панораму с фигурной рамкой внизу*/ 
+  background-position: bottom, top;
+  background-repeat: no-repeat;
+  height: 557px;
+    
+  text-align: center;
+}
+.invite {
+  text-align: center;
+}
+.invite h2 {  /*Шрифты для приглашения*/ 
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+}
+.invite p {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: normal;
+  color: #333333;
+}
+
+/* Раздел Преимущества*/
+.features-list { /*Отмненяем маркеры ненумерованного списка */
+  list-style: none;
+  text-align: center;
+}
+/*Зададим выравнивание текста по центру и назначим размер шрифта для  преимуществ.*/
+
+.features-list h3 {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: bold;
+  color: #000000;
+}
+.features-list span {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  color: #333333;
+}
+.features-list p {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  color: #333333;
+}
+.feature-list-extra {   /*Задаем цвета блоков с преимуществами*/ 
+  background-color: #eeeeee;
+}
+ div.feature-list { 
+  background-color: #81b3d2;
+ }
+ div.feature-list h3,
+ div.feature-list span,
+ div.feature-list p { 
+  color: #ffffff;
+ }
+ 
+/* Раздел Для туристов*/
+.features-item { /*Отмненяем маркеры ненумерованного списка */
+  list-style: none;
+}
+.features-item { /*Зададим выравнивание текста по центру и назначим размер шрифта для  преимуществ.*/
+text-align: center;
+}
+.features-item h3 {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: bold;
+  color: #000000;
+}
+.features-item p {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  color: #333333;
+}
+.features-item li:nth-child(1)::before{/*Вставляем иконки жилья, еды и сувениров*/
+  content: url("../img/housing.png");
+}
+.features-item li:nth-child(2)::before{
+  content: url("../img/food.png");
+}
+.features-item li:nth-child(3)::before{
+  content: url("../img/souvenirs.png");
+}
+/*Раздел выбор отеля и форма для поиска гостиницы*/
+.book-a-hotel{
+  text-align: center;
+}
+.book-a-hotel h3{
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: bold;
+  color: #000000;	
+}
+.book-a-hotel p{
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+  color: #333333;	
+}
+.button-hotel-search {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+
+  text-align: center;
+  color: #ffffff;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  background-color: #766357;/*Задаем стили для кнопки поиска гостиницы*/ 
+  border: none;
+}
+a.button-hotel-search:hover,
+a.button-hotel-search:focus {
+  background-color: #604e43;
+}
+a.button-hotel-search:active{
+  background-color: #503e33;
+  color: rgba(255, 255, 255, 0.3);
+}
+.button-search {
+  background-color: #81b3d2;
+}
+.button-search:hover,
+.button-search:focus {
+  background-color: #669ec0;
+}
+.button-search:active{
+  background-color: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
+}
+.hotel-search-item {/*Стили для указания даты заезда и выезда и числа взрослых и детей*/ 
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000;
+  text-transform: uppercase;
+  background-color: #ffffff;
+}
+.hotel-search-item input {
+  font: inherit;
+  text-transform: uppercase;
+  background-color: #f2f2f2;
+  border: none;  
+}
+
+.hotel-search-item input:hover{
+  background-color: #ebebeb;
+}
+.hotel-search-item input:focus {
+  background-color: #ffffff;
+}
+
+/*Подвал*/
+.main-footer a{ /* Задаем шрифты для элементов */ 
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+}
+.main-footer b{
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: normal;
+  color: #000000;
+} 
+.main-footer ul{
+ list-style: none;
+}
+
+ /*Страница каталога*/ 
+.filters {
+  background-image: url("../img/panorama-filter.jpg");/*Добавляем фоновую картинку на форму для поиска отеля*/ 
+  background-position: center;
+  background-repeat: no-repeat;
+} 
+.filter fieldset {/*Убираем границы легенды*/ 
+  border: none;
+}
+.filter legend {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.filter ul {
+  list-style: none;
+}
+	
+.filter-option {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  color: #ffffff;
+}
+.sort span {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+}
+.filter-button-show{/*Стили для кнопки "показать"*/
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  color: #ffffff;
+  background-color : transparent;
+  border: 2px solid #ffffff;
+}
+button.filter-button-show:hover,
+button.filter-button-show:focus{
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  color: #000000;
+  background-color : #ffffff;
+ }
+.sort-list {
+  list-style: none;
+}
+.sort-list a{  /*Сортировка покой*/
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.3); 
+}
+.sort-list a:visited{/*Сортировка текущая*/
+  color: #81b3d2;
+}	
+.sort-list a:hover,  /*Сортировка наведение и фокус*/
+.sort-list a:focus{
+  color: #81b3d2;
+}
+.sort-list a:active{   /*Сортировка нажатие*/
+  color: #000000;
+}
+
+.button-hotel h3{/*Стили для ссылки по названию отеля*/ 
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;	
+}
+.button-hotel h3:hover,
+.button-hotel h3:focus {
+ color: #81b3d2; 
+}
+.button-hotel h3:active {
+ color: rgba(0, 0, 0, 0.3); 
+}
+.catalog-list{ /*Отмненяем маркеры ненумерованного списка */
+  list-style: none;
+}
+.catalog-item span{/*Параметры текста на карточке отеля*/ 
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  color: #333333;	
+}
+.rating {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  color: ##666666;
+background-color: #f2f2f2;  
+}
+a.button-more,/*Стили для кнопок "подробнее" и "забронировать" на карточке отеля*/ 
+a.button-booking{
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  color: #ffffff;
+}
+a.button-more{
+  background-color: #81b3d2;
+}
+a.button-more:hover,
+a.button-more:focus {
+  background-color: #669ec0; 
+}
+a.button-more:active {
+  background-color: #5496bd;
+  color: rgba(255, 255, 255, 0.3); 
+}
+a.button-booking{
+  background-color: #766357;
+}
+a.button-booking:hover,
+a.button-booking:focus {
+  background-color: #604e43; 
+}
+ a.button-booking:active {
+  background-color: #503e33;
+  color: rgba(255, 255, 255, 0.3); 
+}
+
+
+
+

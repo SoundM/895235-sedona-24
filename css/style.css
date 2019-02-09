@@ -8,17 +8,31 @@ body {
   color: #333333;
   text-transform: uppercase;
   
-  background-color: #ffffff;
-  width: 1280px;
+  background-color: #f2f2f2;
+}
+.visually-hidden { /*Прячем заголовки которых нет в макете */
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 a {
   text-decoration: none; /*Отмненяем подчеркивание у ссылок */
 }
+/* Контейнер */
+.container {
+  margin:auto;	
+  background-color: #ffffff;
+  background-position: center;
+  box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
+  width: 1200px;
+}
 
  /*Раздел Навигация */
  
-.main-navigation{ /*Задаем стили навигации. Размер, цвет и толщину шрифта, высоту строки, фон. */
+.main-navigation { /*Задаем стили навигации. Размер, цвет и толщину шрифта, высоту строки, фон. */
   font-size: 14px;
   line-height: 26px;
   font-weight: bold;
@@ -42,17 +56,10 @@ a {
 .site-navigation a:active { /*Состояние нажатия на ссылку */
   color: rgba(0, 0, 0, 0.3);
 }
-.site-navigation .current-page{ /*Состояние активный, находимся на странице */
+.site-navigation .current-page { /*Состояние активный, находимся на странице */
   color: #766357;
 }
 
-/* Контейнер */
-.container {
-  background-color: #ffffff;
-  background-position: center;
-  box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
-  width: 1200px;
-}
 
 /* Раздел Панорамный вид с приглашением в Седону */
 .welcome-panorama {
@@ -135,26 +142,26 @@ text-align: center;
   font-weight: normal;
   color: #333333;
 }
-.features-item li:nth-child(1)::before{/*Вставляем иконки жилья, еды и сувениров*/
+.features-item li:nth-child(1)::before {/*Вставляем иконки жилья, еды и сувениров*/
   content: url("../img/housing.png");
 }
-.features-item li:nth-child(2)::before{
+.features-item li:nth-child(2)::before {
   content: url("../img/food.png");
 }
-.features-item li:nth-child(3)::before{
+.features-item li:nth-child(3)::before {
   content: url("../img/souvenirs.png");
 }
 /*Раздел выбор отеля и форма для поиска гостиницы*/
-.book-a-hotel{
+.book-a-hotel {
   text-align: center;
 }
-.book-a-hotel h3{
+.book-a-hotel h3 {
   font-size: 30px;
   line-height: 36px;
   font-weight: bold;
   color: #000000;	
 }
-.book-a-hotel p{
+.book-a-hotel p {
   font-size: 14px;
   line-height: 24px;
   font-weight: normal;
@@ -177,7 +184,7 @@ a.button-hotel-search:hover,
 a.button-hotel-search:focus {
   background-color: #604e43;
 }
-a.button-hotel-search:active{
+a.button-hotel-search:active {
   background-color: #503e33;
   color: rgba(255, 255, 255, 0.3);
 }
@@ -188,7 +195,7 @@ a.button-hotel-search:active{
 .button-search:focus {
   background-color: #669ec0;
 }
-.button-search:active{
+.button-search:active {
   background-color: #5496bd;
   color: rgba(255, 255, 255, 0.3);
 }
@@ -206,7 +213,7 @@ a.button-hotel-search:active{
   border: none;  
 }
 
-.hotel-search-item input:hover{
+.hotel-search-item input:hover {
   background-color: #ebebeb;
 }
 .hotel-search-item input:focus {
@@ -214,19 +221,19 @@ a.button-hotel-search:active{
 }
 
 /*Подвал*/
-.main-footer a{ /* Задаем шрифты для элементов */ 
+.main-footer a { /* Задаем шрифты для элементов */ 
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
   color: #000000;
 }
-.main-footer b{
+.main-footer b {
   font-size: 14px;
   line-height: 26px;
   font-weight: normal;
   color: #000000;
 } 
-.main-footer ul{
+.main-footer ul {
  list-style: none;
 }
 
@@ -261,7 +268,7 @@ a.button-hotel-search:active{
   font-weight: bold;
   color: #000000;
 }
-.filter-button-show{/*Стили для кнопки "показать"*/
+.filter-button-show {/*Стили для кнопки "показать"*/
   font-size: 14px;
   line-height: 21px;
   font-weight: normal;
@@ -270,7 +277,7 @@ a.button-hotel-search:active{
   border: 2px solid #ffffff;
 }
 button.filter-button-show:hover,
-button.filter-button-show:focus{
+button.filter-button-show:focus {
   font-size: 14px;
   line-height: 21px;
   font-weight: normal;
@@ -280,24 +287,24 @@ button.filter-button-show:focus{
 .sort-list {
   list-style: none;
 }
-.sort-list a{  /*Сортировка покой*/
+.sort-list a {  /*Сортировка покой*/
   font-size: 12px;
   line-height: 18px;
   font-weight: normal;
   color: rgba(0, 0, 0, 0.3); 
 }
-.sort-list a:visited{/*Сортировка текущая*/
+.sort-list a:visited {/*Сортировка текущая*/
   color: #81b3d2;
 }	
 .sort-list a:hover,  /*Сортировка наведение и фокус*/
-.sort-list a:focus{
+.sort-list a:focus {
   color: #81b3d2;
 }
-.sort-list a:active{   /*Сортировка нажатие*/
+.sort-list a:active {   /*Сортировка нажатие*/
   color: #000000;
 }
 
-.button-hotel h3{/*Стили для ссылки по названию отеля*/ 
+.button-hotel h3 {/*Стили для ссылки по названию отеля*/ 
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
@@ -310,7 +317,7 @@ button.filter-button-show:focus{
 .button-hotel h3:active {
  color: rgba(0, 0, 0, 0.3); 
 }
-.catalog-list{ /*Отмненяем маркеры ненумерованного списка */
+.catalog-list { /*Отмненяем маркеры ненумерованного списка */
   list-style: none;
 }
 .catalog-item span{/*Параметры текста на карточке отеля*/ 
@@ -327,13 +334,13 @@ button.filter-button-show:focus{
 background-color: #f2f2f2;  
 }
 a.button-more,/*Стили для кнопок "подробнее" и "забронировать" на карточке отеля*/ 
-a.button-booking{
+a.button-booking {
   font-size: 14px;
   line-height: 21px;
   font-weight: normal;
   color: #ffffff;
 }
-a.button-more{
+a.button-more {
   background-color: #81b3d2;
 }
 a.button-more:hover,
@@ -344,7 +351,7 @@ a.button-more:active {
   background-color: #5496bd;
   color: rgba(255, 255, 255, 0.3); 
 }
-a.button-booking{
+a.button-booking {
   background-color: #766357;
 }
 a.button-booking:hover,

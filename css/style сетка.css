@@ -1,8 +1,4 @@
 body {
-
-  width: 1280px;
-  min-height: 2762px;
-
   margin: 0;
   
   font-family: "PT Sans", Arial, sans-serif; /*Задаем основной и вспомогательный шрифт*/ 
@@ -27,8 +23,9 @@ a {
 }
 /* Контейнер */
 .container {
+  margin: 0;
   margin:auto;	
-  background-color: #ffffff;
+  background-color: *#ffffff ;
   background-position: center;
   box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
   width: 1200px;
@@ -65,19 +62,24 @@ a {
 }
 
 
-
 /* Раздел Панорамный вид с приглашением в Седону */
+
 .welcome-panorama {
-  background-image: url("../img/polygon.svg"), url("../img/panorama for index.jpg");/*Вставляем центральную панораму с фигурной рамкой внизу*/ 
-  background-position: bottom, top;
+  /*background-image: url("../img/polygon.svg"); url("../img/panorama.jpg");Вставляем центральную панораму с фигурной рамкой внизу
+  background-position: center;bottom, top;!!!!!!!!!!!!!!!!!!!!!!!!!!!
   background-repeat: no-repeat;
-  min-height: 505px;
-    
+  height: 557px;!!!!!!!!!!!!!!!!!!!!!!*/
+   margin:0;
+  padding: 0;   
   text-align: center;
+  padding-bottom: 15px;
 }
-.invite {
+.invite-container {
+
   text-align: center;
+  background-color: #ffffff;
 }
+
 .invite h2 {  /*Шрифты для приглашения*/ 
   font-size: 21px;
   line-height: 26px;
@@ -119,17 +121,14 @@ a {
 .feature-list-extra {   /*Задаем цвета блоков с преимуществами*/ 
   background-color: #eeeeee;
 }
- .feature-list-content { 
+ div.feature-list { 
   background-color: #81b3d2;
  }
- .feature-list-content h3,
- .feature-list-content span,
- .feature-list-content p { 
+ div.feature-list h3,
+ div.feature-list span,
+ div.feature-list p { 
   color: #ffffff;
  }
-.feature-foto img {
-	display: block;
-}
  
 /* Раздел Для туристов*/
 .features-item { /*Отмненяем маркеры ненумерованного списка */
@@ -371,6 +370,116 @@ a.button-booking:focus {
   color: rgba(255, 255, 255, 0.3); 
 }
 
+/*  СЕТКА */
+
+body {
+	width: 1280px;
+min-height: 2762px;
+}
 
 
+.wallpaper {
+  background-image:  url("../img/panorama.jpg"); /*Вставляем центральную панораму с фигурной рамкой внизу*/ 
+  background-position:  top ;
+  background-repeat: no-repeat;	
+}
+.main-header{
+	width: 100%;
+	margin: 0;
+	margin-bottom: 76px;
+}
+.main-navigation {
+	width: 100%;
+}
 
+.main-header-logo{
+	width: 1200px;
+	display: block;
+	position: absolute;
+	
+	top: 0;
+	text-align: center
+	
+	
+}
+.site-navigation {
+	list-style: none;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	padding: 15px 0 16px ;
+	
+	display: flex;
+	justify-content: space-around;
+}
+.site-navigation li{
+	display: inline-block;
+		
+	width: 239px;
+	vertical-align: middle;
+	text-align: center;
+	
+}
+.site-navigation li:nth-child(2){
+	margin-right: 240px;
+}
+
+.invite-container {
+  
+  background-image: url("../img/polygon.svg");/* url("../img/panorama.jpg");Вставляем центральную панораму с фигурной рамкой внизу*/ 
+  
+  background-position: top;/*bottom, top;!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+  background-repeat: no-repeat;
+  margin: 0;
+  background-color: transparent;
+  padding-top: 57px;
+
+}
+.invite {
+
+  background-color: #ffffff;
+}
+.invite-text {
+	display: inline-block;
+	width: 500px;
+
+ background-color: #ffffff;
+	margin: 0 auto;
+	padding-top: 40px;
+	vertical-align: middle;
+	text-align: center;
+}
+.invite-text h2 {
+	margin: 0;
+	padding: 0;
+	padding-top: 20px;
+}
+.invite-text p {
+	margin: 0;
+	padding: 0;
+	padding-top: 25px;
+	padding-bottom: 50px;
+}
+/*
+
+body {
+background-image: url("https://cdn.zeplin.io/5c3dac691e4df30df4a8c16e/screens/0C69D87D-2F75-4310-858C-A063E0C5A1C6.png");
+width: 1280px;
+min-height: 2762px;
+background-size: 1280px auto;
+ background-repeat: no-repeat;
+}
+
+.container > * {
+	background-color: rgba(255,0,0,0.3);
+}
+.container > * > *{
+	background-color: rgba(255,255,0,0.3);
+}
+.container > * > * > * {
+	background-color: rgba(0,255,0,0.3);
+}
+.container > * > * > * > * {
+	background-color: rgba(255,0, 255,0.3);
+}
+*/

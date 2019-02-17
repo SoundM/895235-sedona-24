@@ -1,8 +1,4 @@
 body {
-
-  width: 1280px;
-  min-height: 2762px;
-
   margin: 0;
   
   font-family: "PT Sans", Arial, sans-serif; /*Задаем основной и вспомогательный шрифт*/ 
@@ -247,7 +243,7 @@ a.button-hotel-search:active {
 
  /*Страница каталога*/ 
 .filters {
-  background-image: url("../img/panorama-filter.jpg");/*Добавляем фоновую картинку на форму для поиска отеля*/ 
+  background-image: url("../img/panorama-filter for catalog.jpg");/*Добавляем фоновую картинку на форму для поиска отеля*/ 
   background-position: center;
   background-repeat: no-repeat;
 } 
@@ -310,6 +306,9 @@ button.filter-button-show:focus {
 }
 .sort-list a:active {   /*Сортировка нажатие*/
   color: #000000;
+}
+.catalog-foto img {
+  display: block;
 }
 
 .button-hotel h3 {/*Стили для ссылки по названию отеля*/ 

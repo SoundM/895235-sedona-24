@@ -1,18 +1,10 @@
 /*  СЕТКА */
 
-body {
-	width: 1280px;
-    min-height: 2762px;
-}
-.main-header {
-	display: flex;
-	flex-direction: column;
-	position: relative
 
+.main-header {
+	position: relative
 }
 .main-header-logo {
-	
-	
 	position: absolute;
 	left: 50%;
 	top: 0;
@@ -125,6 +117,11 @@ body {
 	width: 435px;
 	margin: 0 auto;
 }
+.about-hotel span {
+	margin-top: 10px;
+}
+/*Футер*/
+
 .main-footer {
 	display: flex;
 	justify-content: space-between;
@@ -140,7 +137,109 @@ body {
 .main-footer .footer-social {
 	list-style: none;
 }
+/*Каталог*/
+.filters {
+	margin-bottom: 30px;
+}
+.filter {
+	min-height: 217px;
+	display: flex;
+	justify-content: flex-start;
+
 	
+}
+.filters-feeld {
+	margin-top: 30px;
+}
+.filters-feeld:nth-child(1) {
+	margin-left: 60px;
+}
+.filters-feeld:nth-child(2) {
+	margin-left: 95px;
+	margin-right: 350px;
+}
+
+.filters-option {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	
+}
+.filters-option li{
+	margin-top: 25px;
+}
+.filters-cost {
+	display: flex;
+	flex-direction: column;
+}
+.catalog-list {
+	margin: 0;
+	padding: 0;
+	
+}
+.catalog-item {
+	display: flex;
+	border-top: 1px solid #f2f2f2;
+	border-bottom: 1px solid #f2f2f2;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	margin: 0 72px;
+}
+.catalog-foto {
+	order: -1;
+	min-height: 90px
+}
+.about-hotel {
+	width: 260px;
+	margin-left: 30px;
+	margin-right: 525px;
+	
+}
+.about-hotel a,
+.button-hotel h3,
+.about-hotel span {
+	display: inline-block; 
+	margin: 0;
+	
+}
+.about-hotel span {
+	margin-top: 5px;
+}
+a.button-more,
+a.button-booking {
+	margin-top: 10px;
+	min-height:24px;
+	text-align: center;
+	vertical-align: middle;
+	padding-top: 4px;
+}
+.button-hotel h3 {
+	margin-top: -5px;
+}
+.catalog-category,
+.button-more {
+	width: 110px;
+	margin-left: 0;
+	margin-right: auto;
+}
+.catalog-price,
+.button-booking {
+	width: 142px;
+	margin-left: 0;
+	margin-right: auto;
+}
+.stars-rating {
+	width: 110px;
+	
+}
+.stars-rating img,
+.stars-rating span {
+	display: inline-block;
+}
+.stars-rating span {
+	margin-top: 42px;
+}
+
 /*
 body {
 	background-image: url("https://cdn.zeplin.io/5c3dac691e4df30df4a8c16e/screens/0C69D87D-2F75-4310-858C-A063E0C5A1C6.png");

@@ -192,7 +192,6 @@
 .about-hotel {
 	width: 260px;
 	margin-left: 30px;
-	margin-right: 525px;
 	
 }
 .about-hotel a,
@@ -230,6 +229,7 @@ a.button-booking {
 }
 .stars-rating {
 	width: 110px;
+	margin-left: auto;
 	
 }
 .stars-rating img,

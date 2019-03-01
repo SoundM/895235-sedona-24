@@ -346,7 +346,7 @@ text-align: center;
 .hotel-search-container input:focus,
 .hotel-search-container-people input:focus{
   background-color: #ffffff;
-  border: none;
+  
 }
 
 /*Подвал*/

@@ -374,6 +374,7 @@ width: 179px;
 .main-footer-catalog {
 	
 	background-color: #ffffff;
+	top: 100%;
 }
 .main-footer-container{
 	margin:0;
@@ -631,10 +632,11 @@ padding:0;
 	padding-top: 30px;
 	padding-bottom: 30px;
 	margin: 0 72px;
+	
 }
 .catalog-foto {
 	order: -1;
-	min-height: 90px
+	min-height: 90px;
 }
 .about-hotel {
 	width: 260px;
@@ -643,6 +645,7 @@ padding:0;
 }
 .about-hotel span {
 	margin-top: 10px;
+	
 }
 .about-hotel a,
 .button-hotel h3,
@@ -681,13 +684,18 @@ a.button-booking {
 	width: 110px;
 	margin-left: auto;
 	
+  text-align: right;
+	
 }
 .stars-rating img,
 .stars-rating span {
 	display: inline-block;
+
 }
 .stars-rating span {
 	margin-top: 42px;
+	margin-right: 10px;
+
 }
 
 /*

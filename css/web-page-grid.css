@@ -450,7 +450,13 @@ width: 179px;
 .button-logo-academy {
 	padding-top: 4px;
 }
-
+.button-logo-academy:hover path,
+.button-logo-academy:focus path {
+  fill: #81b3d2;
+}
+.button-logo-academy:active path {
+  fill: #bdbbbc;
+}
 
 
 

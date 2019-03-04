@@ -284,15 +284,12 @@ p.exept {
 
 .hotel-search-container-people input[type="text"]{ 
 	width: 38px;
-	 display: block;
- 
-  padding-top: 8px;
-  padding-bottom: 7px;
- margin: 0;
-  
-  font: inherit;
-  color: #000000;
-  text-transform: uppercase;
+	display: inline-block;
+	margin: 0;
+	  
+	font: inherit;
+	color: #000000;
+	text-transform: uppercase;
 	text-align: center;
 }
 .button-calendar {
@@ -326,46 +323,29 @@ width: 179px;
 
 .button-less-people,
 .button-more-people {
-	min-width: 37px;
-	position: relative;
-	border: none;
+	display: inline-block;
+    vertical-align: bottom;
+    width: 38px;
+    height: 38px;
+    box-sizing: border-box;
+    border: none;
 	background-color: #f2f2f2;
-	  cursor: pointer;
+	cursor: pointer;
+    fill: #cacaca;
+     
 }
 .button-less-people {
 	margin-left: auto;
 }
-.button-less-people::before,
-.button-more-people::before,
-.button-more-people::after {
-  content: "";
-
-  position: absolute;
-  top: 19px;
-  left: 13px;
-
-  width: 12px;
-  height: 3px;
-
-  background-color: #a9a9a9;
-  
+.button-less-people:hover,
+.button-more-people:hover,
+.button-less-people:focus,
+.button-more-people:focus {
+	fill: #000000;
 }
-.button-more-people::after {
-	 transform: rotate(90deg);
-	 
-}
-.button-less-people:hover::before,
-.button-more-people:hover::before,
-.button-more-people:hover::after,
-.button-less-people:focus::before,
-.button-more-people:focus::before,
-.button-more-people:focus::after {
-	background-color: #000000;
-}
-.button-less-people:active::before,
-.button-more-people:active::before, 
-.button-more-people:active::after {
-	background-color: #81b3d2;
+.button-less-people:active, 
+.button-more-people:active {
+	fill: #81b3d2;
 }
 
 .button-search {

@@ -801,12 +801,15 @@ a.button-booking {
 .stars-rating img,
 .stars-rating span {
 	display: inline-block;
+	margin-right: 1px;
 
 }
 .stars-rating span {
+	display: inline-block;
 	margin-top: 42px;
-	margin-right: 12px;
-
+	
+	padding: 0 12px;
+    background: #f2f2f2;
 }
 
 /*

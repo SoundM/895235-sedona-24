@@ -71,7 +71,8 @@ img {
 .site-navigation a:active { /*Состояние нажатия на ссылку */
   color: rgba(0, 0, 0, 0.3);
 }
-.site-navigation .current-page { /*Состояние активный, находимся на странице */
+.site-navigation,
+ .current-page-right { /*Состояние активный, находимся на странице */
   color: #766357;
 }
 
@@ -120,7 +121,7 @@ img {
 
 .features-list h3 {
 	margin: 0;
-	margin-top: 48px;
+	margin-top: 47px;
   margin-bottom: 22px;
 	
   font-size: 21px;
@@ -279,9 +280,9 @@ text-align: center;
 }
 .book-a-hotel p {
 	margin:0;
-	margin-bottom: 46px;
-	margin-left: 67px;
-  margin-right: 67px;
+	margin-bottom: 47px;
+	margin-left: 60px;
+  margin-right: 60px;
   font-size: 14px;
   line-height: 24px;
   font-weight: normal;
@@ -308,6 +309,7 @@ text-align: center;
 .button-hotel-search:active {
   background-color: #503e33;
   color: rgba(255, 255, 255, 0.3);
+  outline: none;
 }
 .button-search {
   background-color: #81b3d2;
@@ -356,12 +358,14 @@ text-align: center;
 
  /*Страница каталога*/ 
 .filters {
+
 	margin: 0;
 	padding: 0;
   background-image: url("../img/panorama-filter for catalog.jpg");/*Добавляем фоновую картинку на форму для поиска отеля*/ 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  
   
 } 
 .filter fieldset {/*Убираем границы легенды*/ 
@@ -404,21 +408,28 @@ button.filter-button-show:focus {
 .sort-list {
   list-style: none;
 }
-.sort-list a {  /*Сортировка покой*/
+.sort-list a{  /*Сортировка покой*/
   font-size: 12px;
   line-height: 18px;
-  font-weight: normal;
+  font-weight: bold;
   color: rgba(0, 0, 0, 0.3); 
+  text-align: left;
+ 
+  border-bottom: 1px dotted #81b3d2;
 }
+
+
 .sort-list a:visited {/*Сортировка текущая*/
   color: #81b3d2;
-}	
+   border-bottom: none;
+}
 .sort-list a:hover,  /*Сортировка наведение и фокус*/
 .sort-list a:focus {
   color: #81b3d2;
 }
 .sort-list a:active {   /*Сортировка нажатие*/
   color: #000000;
+  border-bottom: none;
 }
 .catalog-foto img {
   display: block;
@@ -426,7 +437,7 @@ button.filter-button-show:focus {
 
 .button-hotel h3 {/*Стили для ссылки по названию отеля*/ 
   font-size: 21px;
-  line-height: 26px;
+  line-height: 0px;
   font-weight: bold;
   color: #000000;	
 }

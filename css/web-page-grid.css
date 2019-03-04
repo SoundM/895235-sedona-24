@@ -24,7 +24,7 @@
 	width: 1200px;
 	margin: 0;
 	padding: 0;
-	padding: 15px 0 16px ;
+	padding: 14px 0 16px ;
 	
 	display: flex;
 	flex-wrap: wrap;
@@ -33,7 +33,7 @@
 }
 .site-navigation li {
 	display: block;
-	width: 239px;
+	width: 240px;
 	margin: 0;
 	padding:0;
 	vertical-align: middle;
@@ -47,7 +47,7 @@
  .site-navigation-right  {
 	text-align: right;
 }
-.site-navigation a  {
+.site-navigation a {
 	box-sizing: border-box;
 	display: inline-block;
 	width: 100%;
@@ -56,8 +56,15 @@
 .site-navigation-left a  {
 	padding-left: 72px;
 }
- .site-navigation-right a  {
-	padding-right: 72px;
+ .site-navigation-right a {
+	padding-right: 71px;
+}
+ li.current-page-right {
+	box-sizing: border-box;
+	
+	padding-right: 71px;
+	word-wrap: break-word; 
+	
 }
 
 
@@ -160,9 +167,14 @@
   margin-right: 120px;
 }
 .feature-list-extra p { 
+   margin-left: 60px;
+   margin-right: 60px;
+ }
+p.exept { 
    margin-left: 75px;
    margin-right: 75px;
  }
+
 .features-item {
 	list-style: none;
 	display: flex;
@@ -171,12 +183,13 @@
 	margin: 0;
 	padding:0;
 	
-	margin-top: 130px;
+	margin-top: 131px;
 	
 }
 .features-item li:nth-child(1) {
 	width: 255px;
 	margin-left: 73px;
+	margin-right:8px;
 }
 .features-item li:nth-child(2) {
 	width: 285px;
@@ -195,7 +208,7 @@
 }
 .button-hotel-search {
   display: inline-block;
-  padding: 30px 138px;
+  padding: 30px 139px;
   cursor: pointer;
 
 }
@@ -254,7 +267,7 @@
 }
 
 .hotel-search-container input[type="text"]{
-  width: 312px;
+  width: 346px;
   box-sizing: border-box;
   
   padding-top: 8px;
@@ -283,13 +296,13 @@
 	text-align: center;
 }
 .button-calendar {
-  min-width: 34px;
+  min-width: 35px;
   text-align: center;
   background-color: transparent;
  border: none;
  position: absolute;
- top: 5px;
- right: 0px;
+ top: 7px;
+ right: 1px;
  cursor: pointer;
  
 }
@@ -313,7 +326,7 @@ width: 179px;
 
 .button-less-people,
 .button-more-people {
-	min-width: 38px;
+	min-width: 37px;
 	position: relative;
 	border: none;
 	background-color: #f2f2f2;
@@ -328,8 +341,8 @@ width: 179px;
   content: "";
 
   position: absolute;
-  top: 18px;
-  left: 12px;
+  top: 19px;
+  left: 13px;
 
   width: 12px;
   height: 3px;
@@ -382,23 +395,28 @@ width: 179px;
 	z-index: 2;
 }
 .main-footer-catalog {
-	
+width: 1200px;
+	min-height: 120px;
+	margin: 0;
+	padding: 0;
 	background-color: #ffffff;
-	top: 100%;
+	
+	
 }
 .main-footer-container{
 	margin:0;
 	padding:0;
+	box-sizing: box;
 	display: flex;
 	
-	margin: 36px 101px 40px 132px;
+	margin: 38px 101px 41px 132px;
 	
 }
 .footer-vizitsedona  {
 	display: block;
 	width: 140px;
 	margin:0;
-   padding-top: 11px;
+   padding-top: 9px;
 
 	font-size: 21px;
   line-height: 26px;
@@ -408,16 +426,24 @@ width: 179px;
 	word-wrap: break-word; 
 }
 .footer-social  {
+	
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 150px;
   margin: 0 ;
-  margin-left: 250px;
+  margin-left: 252px;
   margin-right: auto;
   padding: 0;
   
   list-style: none;
+}
+.footer-social li{
+	display: block;
+	
+	margin: 0;
+	padding:0;
+	
 }
 .social-button {
 	margin: 0;
@@ -428,7 +454,7 @@ width: 179px;
   align-items: center;
   justify-content: center;
   width: 46px;
-  height: 48px;
+  height: 46px;
 
   background-color: #81b3d2;
 }
@@ -445,21 +471,22 @@ width: 179px;
 }
 .footer-copyright {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-end;
 	width: 200px;
 	margin: 0;
 	padding:0;
 }
 .footer-copyright b {
   margin:0;
-   padding-top: 12px;
+   padding-top: 9px;
   font-size: 14px;
   line-height: 26px;
   font-weight: normal;
   color: #000000;
 }
 .button-logo-academy {
-	padding-top: 4px;
+	padding-top: 2px;
+	margin-left: 8px
 }
 .button-logo-academy:hover path,
 .button-logo-academy:focus path {
@@ -474,8 +501,9 @@ width: 179px;
 
 /*Каталог*/
 .filters {
-	margin-bottom: 30px;
-	min-height: 223px;
+	margin: 0;
+	padding:0;	
+	margin-bottom: 19px;
 }
 .filter {
 	min-height: 217px;
@@ -625,9 +653,59 @@ padding:0;
 
   background: #ffffff;
 }
+/*Сортировка*/
+.sort {
+  
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: baseline;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 13px;
+}
+.sort span{
+	display: inline-block;
+	margin:0;
+	margin-left:72px;
+	 font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+}
+.sort p{
+	display: inline-block;
+	margin:0;
+	margin-left:48px;
+	font-size: 12px;
+  line-height: 18px;
+  font-weight: normal;
+  color: #000000;
+}
+.sort-list {
+	list-style: none;
+	
+	margin: 0;
+	padding: 0;
+	padding: 14px 0 16px ;
+	
+	display: flex;
+	flex-wrap: wrap;
+	background-color: transparent;
+
+}
+.sort-list li {
+	display: inline- block;
+	
+	margin: 0;
+	padding:0;
+	margin-left: 33px;
+}
 
 
-
+.sort-list li:first-child {
+	margin-left: 40px;
+}
 /*Карточки гостиниц*/
 
 .catalog-list {
@@ -638,49 +716,64 @@ padding:0;
 .catalog-item {
 	display: flex;
 	border-top: 1px solid #f2f2f2;
-	border-bottom: 1px solid #f2f2f2;
-	padding-top: 30px;
-	padding-bottom: 30px;
-	margin: 0 72px;
+	margin: 0;
+	padding: 0;
+	padding-left: 72px;
+	padding-right: 72px;
+	padding-top:30px;
+	padding-bottom: 29px;
 	
+	
+}
+.catalog-item:last-child {
+	border-bottom: 1px solid #f2f2f2;
+	padding-top:32px;
+
 }
 .catalog-foto {
 	order: -1;
-	min-height: 90px;
+	height: 100%;
 }
 .about-hotel {
-	width: 260px;
+	margin: 0;
+	padding:0;
+	
+	width: 270px;
 	margin-left: 30px;
-	
+	display: flex;
+	flex-wrap: wrap;
 }
-.about-hotel span {
-	margin-top: 10px;
-	
+
+a.button-hotel
+{
+	display: inline-block; 
+	margin: 0;
+	padding: 0;
 }
+
 .about-hotel a,
 .button-hotel h3,
 .about-hotel span {
 	display: inline-block; 
 	margin: 0;
 	
+	
 }
-.about-hotel span {
-	margin-top: 5px;
-}
+
 a.button-more,
 a.button-booking {
-	box-sizing: border-box;
+	display: inline-block;
 	margin: 0;
-	margin-top: 15px;
-	padding-top: 2px;
-	padding-bottom: 2px;
+	margin-top: auto;
+	margin-right: 6px;
+	
+	padding-top: 3px;
+	padding-bottom: 3px;
 	text-align: center;
 	vertical-align: middle;
 	
 }
-.button-hotel h3 {
-	margin-top: -5px;
-}
+
 .catalog-category,
 .button-more {
 	width: 110px;
@@ -700,6 +793,11 @@ a.button-booking {
   text-align: right;
 	
 }
+.catalog-price  {
+	padding-left: 6px;
+	padding-bottom:2px;
+}
+
 .stars-rating img,
 .stars-rating span {
 	display: inline-block;
@@ -707,7 +805,7 @@ a.button-booking {
 }
 .stars-rating span {
 	margin-top: 42px;
-	margin-right: 10px;
+	margin-right: 12px;
 
 }
 

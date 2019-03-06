@@ -74,6 +74,7 @@ img {
 }
 .site-navigation { /*Отмненяем маркеры ненумерованного списка */
   list-style: none;
+  box-sizing: border-box;
   
   width: 1200px;
   margin: 0;
@@ -92,7 +93,7 @@ img {
 	vertical-align: middle;
 }
 .site-navigation li:nth-child(3) {
-	margin-left: 96px;/*можно margin-left: auto; но тогда при переполнении ссылка прячется под логотип*/
+	margin-left: 95px;/*можно margin-left: auto; но тогда при переполнении ссылка прячется под логотип*/
 }
 .site-navigation-left  {
 	text-align: left;
@@ -527,6 +528,7 @@ p.exept {
 .hotel-search-container input:focus,
 .hotel-search-container-people input:focus {
   background-color: #ffffff;
+  border: solid 2px #e5e5e5; 
   outline: none;
 }
 .button-calendar {
@@ -962,7 +964,7 @@ p.exept {
   background-color: transparent;
 }
 .sort-list li {
-  display: inline- block;
+  display: inline-block;
   
   margin: 0;
   padding:0;

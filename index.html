@@ -133,7 +133,7 @@
 							</div>
 							<div class="hotel-search-container">
 								<label for="departure-date">Дата выезда:</label>
-								<input class="input-calendar" id="departure-date" type="text" name="departure-date-from-the-hotel" value="" placeholder="4 июля 2017">
+								<input class="input-calendar" id="departure-date" type="text" name="date-of-departure-from-the-hotel" value="" placeholder="4 июля 2017">
 								<button class="button-calendar" type="button">	
 									<svg xmlns="http://www.w3.org/2000/svg" fill="#a9a9a9"  width="21" height="22" viewBox="0 0 21 22">
 										<path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"/>
@@ -148,7 +148,7 @@
 									<path data-original="#000000" class="active-path" d="M0 8.61h22.354v5.133H0z"></path>
 									</svg>							
 								</button>
-								<input class="people" id="number-of-adults" type="text" name="number-of-adults" value=""  placeholder="2">
+								<input class="people adults" id="number-of-adults" type="text" name="number-of-adults" value=""  placeholder="2">
 								<button class="button-more-people" type="button" aria-label="Увеличить количество взрослых">
 									<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 533.333 533.333">
 										<path d="M516.667 200H333.333V16.667C333.333 7.462 325.871 0 316.667 0h-100C207.462 0 200 7.462 200 16.667V200H16.667C7.462 200 0 207.462 0 216.667v100c0 9.204 7.462 16.666 16.667 16.666H200v183.334c0 9.204 7.462 16.666 16.667 16.666h100c9.204 0 16.667-7.462 16.667-16.666V333.333h183.333c9.204 0 16.667-7.462 16.667-16.666v-100c-.001-9.205-7.463-16.667-16.667-16.667z" data-original="#000000" class="active-path"></path>
@@ -162,14 +162,14 @@
 										<path data-original="#000000" class="active-path" d="M0 8.61h22.354v5.133H0z"></path>
 									</svg>							
 								</button>
-								<input class="people" id="number-of-children" type="text" name="number-of-children" value=""  placeholder="0">
+								<input class="people children" id="number-of-children" type="text" name="number-of-children" value=""  placeholder="0">
 								<button class="button-more-people" type="button" aria-label="Увеличить количество детей">
 									<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 533.333 533.333">
 										<path d="M516.667 200H333.333V16.667C333.333 7.462 325.871 0 316.667 0h-100C207.462 0 200 7.462 200 16.667V200H16.667C7.462 200 0 207.462 0 216.667v100c0 9.204 7.462 16.666 16.667 16.666H200v183.334c0 9.204 7.462 16.666 16.667 16.666h100c9.204 0 16.667-7.462 16.667-16.666V333.333h183.333c9.204 0 16.667-7.462 16.667-16.666v-100c-.001-9.205-7.463-16.667-16.667-16.667z" data-original="#000000" class="active-path"></path>
 									</svg>
 								</button>
 							</div>
-							<button class="button-hotel-search button-search" type="submit">Найти</button>
+							<button class="button-search" type="submit">Найти</button>
 						</form> 
 					</section>
 				</section>
@@ -217,6 +217,63 @@
 				</div>
 			</footer> 
 		</div>
+
+	<script>
+		var link = document.querySelector(".button-hotel-search"); <!-- Находим кнопку, клик по которой покажет модальное окно -->
 		
+		var popup = document.querySelector(".modal-hotel-search-form"); <!-- Находим модальное окно в разметке и записываем его в переменную. Добавляем в стили класс, который будет отвечать за показ модального окна. .modal-show {display: block;} -->
+		
+		var form = popup.querySelector("form");
+		var dateOfArrival = popup.querySelector("[name=date-of-arrival-at-the-hotel]");
+		var dateOfDeparture = popup.querySelector("[name=date-of-departure-from-the-hotel]");
+		var adults = popup.querySelector("[name=number-of-adults]");
+		var children = popup.querySelector("[name=number-of-children]");
+		
+		var isStorageSupport = true; <!-- Некоторые браузеры не имеют поддержку localStorage, или он может быть отключен, нам стоит учитывать такую возможность. -->
+		var storageAdults = "";
+		var storageChildren = "";
+  
+		try {
+			storageAdults = localStorage.getItem("adults");
+			storageChildren = localStorage.getItem("children");
+		} catch (err) {
+			isStorageSupport = false;
+		}
+		
+		link.addEventListener("click", function (evt) { <!-- Поймаем событие клика по этой кнопке. -->
+			<!-- evt.preventDefault(); Отменим стандартное действие ссылки при нажатии на неё. -->
+			popup.classList.toggle("modal-show"); <!-- С помощью метода classList.toggle добавляем этот класс к модальному окну по клику на ссылку, а при повторном клике убираем класс. т.е. он поочередно то добавляется, то исчезает -->
+				
+			if (storage) {
+				adults.value = storageAdults;
+				children.value = storageChildren;
+			}
+			
+			dateOfArrival.focus(); <!-- при открытии формы фокус автоматически устанавливался в поле ввода даты заезда в отель -->
+		});
+		
+		form.addEventListener("submit", function (evt) { <!-- Отловим событие отправки формы и отменим его, если какое-то из полей незаполнено. -->
+			if (!dateOfArrival.value || !dateOfDeparture.value || !adults.value || !children.value) {
+				evt.preventDefault();
+				popup.classList.add("modal-error");
+			} 	else {
+				if (isStorageSupport) {
+					localStorage.setItem("adults", adults.value);
+					localStorage.setItem("children", children.value);
+				}
+			}
+		});
+		
+		window.addEventListener("keydown", function (evt) {
+			if (evt.keyCode === 27) {
+				evt.preventDefault();
+				if (popup.classList.contains("modal-show")) {
+					popup.classList.remove("modal-show");
+					popup.classList.remove("modal-error");
+				}
+			}
+		});
+	</script>
+	
 	</body>
 </html>

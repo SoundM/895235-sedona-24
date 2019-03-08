@@ -390,9 +390,18 @@ p.exept {
 .book-a-hotel {
   position: relative;
   margin: 0 auto;
-  width: 568px;
+  width: 590px;
+  min-height: 292px;
 	
   text-align: center; 
+}
+.book-a-hotel-wrapper {
+	position: absolute;
+	width: 100%;
+	margin:0 auto;
+	padding: 0;
+	z-index: 10;
+	background-color: #ffffff;
 }
 .button-hotel-search {
   display: inline-block;
@@ -415,7 +424,7 @@ p.exept {
 .book-a-hotel h3 {
   margin:0;
   margin-top: 50px;
-  margin-bottom: 24px;
+  margin-bottom: 25px;
   
   font-size: 30px;
   line-height: 36px;
@@ -445,19 +454,25 @@ p.exept {
 }
 @keyframes bounce {
   0% {
-   transform: translate(-284px, -300px);
+   transform: translate(-284px, -290px);
+   height: 292px;
   }
 
-  70% {
-    transform: translate(-284px, -150px);
+  20% {
+    transform: translate(-284px, 100px);
   }
 
-  90% {
-    transform: translate(-284px, 50px);
-  }
-
-  100% {
+  40%,
+  70%,
+  100%  {
     transform: translate(-284px, 0px);
+  }
+  
+  60% {
+    transform: translate(-284px, 60px);
+  }
+  90% {
+    transform: translate(-284px, 30px);
   }
 }
 @keyframes shake {
@@ -500,7 +515,7 @@ p.exept {
 }
 .modal-show {
   display: block;
-  animation: bounce 0.6s;
+  animation: bounce 0.7s;
 }
 .modal-error {
   animation: shake 0.6s;
@@ -512,10 +527,11 @@ p.exept {
 }
 .hotel-search-container,
 .hotel-search-container-people {/*Стили для указания даты заезда и выезда и числа взрослых и детей*/ 
+  display: inline-block;
   margin: 0;
   padding: 0;
   width: 100%;
-  margin-bottom: 28px;
+  margin-bottom: 26px;
   
   display: flex;
   justify-content: space-between;
@@ -528,6 +544,7 @@ p.exept {
 }
 .hotel-search-container {
   width: 458px;
+  
   position: relative;
 }
 .hotel-search-container label,
@@ -542,7 +559,7 @@ p.exept {
   width: 346px;
   box-sizing: border-box;
   
-  padding-top: 8px;
+  padding-top: 7px;
   padding-left: 13px;
   padding-bottom: 7px;
   padding-right: 34px;
@@ -622,7 +639,10 @@ p.exept {
   outline: none;
   }
 .button-less-people {
-  margin-left: auto;
+  margin-left: 40px;
+}
+.children .button-less-people {
+  margin-left: 30px;
 }
 .button-less-people:hover,
 .button-more-people:hover,

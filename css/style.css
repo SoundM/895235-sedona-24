@@ -528,12 +528,12 @@ p.exept {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.hotel-search-container,
-.hotel-search-container-people {/*Стили для указания даты заезда и выезда и числа взрослых и детей*/ 
+.hotel-search-container {/*Стили для указания даты заезда и выезда и числа взрослых и детей*/ 
+  position: relative;
   display: inline-block;
   margin: 0;
   padding: 0;
-  width: 100%;
+  width: 458px;
   margin-bottom: 26px;
   
   display: flex;
@@ -545,10 +545,22 @@ p.exept {
   text-transform: uppercase;
   background-color: #ffffff;
 }
-.hotel-search-container {
-  width: 458px;
+
+.hotel-search-container-people {/*Стили для указания даты заезда и выезда и числа взрослых и детей*/ 
+  display: inline-block;
+  margin: 0;
+  padding: 0;
   
-  position: relative;
+  margin-bottom: 26px;
+  
+  display: flex;
+  justify-content: flex-end;
+  
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000;
+  text-transform: uppercase;
+  background-color: #ffffff;
 }
 .hotel-search-container label,
 .hotel-search-container-people label{
@@ -885,7 +897,7 @@ p.exept {
   background-image: url("../img/checkbox-on.png");
   background-repeat: no-repeat;
   width: 27px;
-  height: 23px;;
+  height: 23px;
 }
 .filter-range-title {
   margin-top: 28px;

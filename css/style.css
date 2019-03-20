@@ -168,7 +168,7 @@ img {
 .invite h2 {
   margin: 0;
   margin-top: 60px;
-  margin-bottom: 27px;
+  margin-bottom: 28px;
 
   font-size: 21px;
   line-height: 26px;
@@ -324,10 +324,9 @@ p.exept {
   margin: 0;
   padding:0;
   background-color: #f2f2f2;
+  
   display: -webkit-box;
-  
   display: -ms-flexbox;
-  
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -410,7 +409,7 @@ p.exept {
 .book-a-hotel h3 {
   margin:0;
   margin-top: 50px;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
   margin-left: 380px;
   margin-right: 380px;
   
@@ -595,9 +594,7 @@ p.exept {
   margin-bottom: 26px;
     
   display: -webkit-box;
-    
   display: -ms-flexbox;
-    
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -617,9 +614,7 @@ p.exept {
   margin-bottom: 26px;
     
   display: -webkit-box;
-    
   display: -ms-flexbox;
-    
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
@@ -790,9 +785,7 @@ p.exept {
   padding: 33px 101px 41px 133px;
   
   display: -webkit-box;
-  
   display: -ms-flexbox;
-  
   display: flex;
   -webkit-box-pack:justify;
       -ms-flex-pack:justify;
@@ -810,6 +803,7 @@ p.exept {
 }
 .main-footer .footer-vizitsedona {
   max-width: 155px;
+  margin-bottom: 3px;
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
@@ -1143,9 +1137,7 @@ p.exept {
   padding: 29px 72px 25px 72px;
   
   display: -webkit-box;
-  
   display: -ms-flexbox;
-  
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -1388,9 +1380,7 @@ p.exept {
   margin-top: -2px;
   
   display: -webkit-box;
-  
   display: -ms-flexbox;
-  
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;

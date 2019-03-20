@@ -24,7 +24,6 @@ input[type="radio"].visually-hidden {
   white-space: nowrap;
 
   -webkit-clip-path: inset(100%);
-
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -79,9 +78,7 @@ img {
   padding: 13px 72px 16px 72px;
 	
   display: -webkit-box;
-	
   display: -ms-flexbox;
-	
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -94,7 +91,7 @@ img {
   padding:0;
 }
 .site-navigation li:nth-child(3) {
-	margin-left: 95px;/*можно margin-left: auto; но тогда при переполнении ссылка прячется под логотип*/
+	margin-left: 95px;
 }
 .site-navigation-left {
 	text-align: left;
@@ -201,6 +198,7 @@ img {
   width: 1200px;
   margin: 0;
   padding: 0;
+  background-color: #81b3d2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -316,7 +314,7 @@ p.exept {
 .feature-list img {
   display: block;
   width: 800px;
-  height: auto;
+  height: 256px;
   -o-object-fit: cover;
      object-fit: cover; 
 }
@@ -325,7 +323,7 @@ p.exept {
   width: 1200px;
   margin: 0;
   padding:0;
-  
+  background-color: #f2f2f2;
   display: -webkit-box;
   
   display: -ms-flexbox;
@@ -377,7 +375,6 @@ p.exept {
   margin-bottom: 22px;
 }
 .book-a-hotel {
-  position: relative;
   margin: 0 auto;
   width: 1200px;
   min-height: 292px;
@@ -385,7 +382,7 @@ p.exept {
   text-align: center; 
 }
 .book-a-hotel-wrapper {
-  position: absolute;
+  position: relative;
   width: 100%;
   margin:0 auto;
   padding: 0;
@@ -414,6 +411,8 @@ p.exept {
   margin:0;
   margin-top: 50px;
   margin-bottom: 25px;
+  margin-left: 380px;
+  margin-right: 380px;
   
   font-size: 30px;
   line-height: 36px;
@@ -423,8 +422,8 @@ p.exept {
 .book-a-hotel p {
   margin:0;
   margin-bottom: 47px;
-  margin-left: 60px;
-  margin-right: 60px;
+  margin-left: 380px;
+  margin-right: 380px;
   
   font-size: 14px;
   line-height: 24px;
@@ -555,7 +554,6 @@ p.exept {
   padding:55px;
   
   left: 50%;
-  top: 100%;
   -webkit-transform:translateX(-50%);
       -ms-transform:translateX(-50%);
           transform:translateX(-50%);
@@ -844,9 +842,7 @@ p.exept {
   margin-left: 6px;
     
   display: -webkit-box;
-    
   display: -ms-flexbox;
-    
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1420,6 +1416,5 @@ p.exept {
   color: #666666;
   background-color: #f2f2f2;  
 }
-
 
 

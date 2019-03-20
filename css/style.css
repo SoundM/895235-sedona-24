@@ -91,13 +91,13 @@ img {
   padding:0;
 }
 .site-navigation li:nth-child(3) {
-	margin-left: 95px;
+  margin-left: 95px;
 }
 .site-navigation-left {
-	text-align: left;
+  text-align: left;
 }
 .site-navigation-right {
-	text-align: right;
+  text-align: right;
 }
 .site-navigation a { 
   -webkit-box-sizing: border-box; 
@@ -227,12 +227,12 @@ img {
   margin-right: 125px;
 }
 .feature-list-content:nth-child(1) p { 
-   margin-left: 55px;
-   margin-right: 55px;
+  margin-left: 55px;
+  margin-right: 55px;
 }
 .feature-list-content:nth-child(2) p { 
-   margin-left: 40px;
-   margin-right: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 .features-list h3 {
   margin: 0;
